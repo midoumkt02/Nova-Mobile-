@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" width="140" height="280">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c5cff"/>
+      <stop offset="100%" stop-color="#00d9d0"/>
+    </linearGradient>
+  </defs>
+  <rect x="6" y="6" width="188" height="388" rx="34" fill="#12141f" stroke="url(#g)" stroke-width="3"/>
+  <rect x="24" y="30" width="152" height="300" rx="10" fill="#1b1e2c"/>
+  <rect x="70" y="10" width="60" height="14" rx="7" fill="#1b1e2c"/>
+  <circle cx="100" cy="360" r="16" fill="none" stroke="url(#g)" stroke-width="3"/>
+  <path d="M100 150 v70 M65 185 h70" stroke="url(#g)" stroke-width="6" stroke-linecap="round"/>
+  <text x="100" y="260" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6b7085">Photo à venir</text>
+</svg>

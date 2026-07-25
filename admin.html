@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espace gérant — NOVA Mobile</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+<!-- ===================== LOGIN ===================== -->
+<div class="login-screen" id="loginScreen">
+  <div class="login-glow"></div>
+  <div class="login-card">
+    <div class="login-logo">
+      <span class="logo-mark">N</span>
+      <span class="logo-text">NOVA<span class="logo-accent">Mobile</span></span>
+    </div>
+    <h1 class="login-title">Espace gérant</h1>
+    <p class="login-sub">Connectez-vous pour gérer les téléphones affichés sur le site.</p>
+
+    <form class="login-form" id="loginForm">
+      <div class="form-group">
+        <label>Adresse email</label>
+        <input type="email" id="loginEmail" placeholder="votre@email.com" required autocomplete="username">
+      </div>
+      <div class="form-group">
+        <label>Mot de passe</label>
+        <input type="password" id="loginPassword" placeholder="••••••••" required autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block" id="loginBtn">Se connecter</button>
+      <div class="login-error" id="loginError"></div>
+    </form>
+
+    <p class="login-hint">Identifiants oubliés ? Contactez la personne qui a créé votre site.</p>
+  </div>
+</div>
+
+<!-- ===================== DASHBOARD ===================== -->
+<div class="dashboard" id="dashboard">
+
+  <header class="admin-header">
+    <div class="container admin-header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">N</span>
+        <span class="logo-text">NOVA<span class="logo-accent">Mobile</span></span>
+      </a>
+      <div class="admin-user">
+        <span>Connecté en tant que <strong id="userEmail">—</strong></span>
+        <a href="index.html" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">Voir le site</a>
+        <button class="btn btn-outline btn-sm" id="logoutBtn">Se déconnecter</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <div class="container">
+
+      <div class="help-box">
+        <strong>Comment ça marche ?</strong>
+        <ol>
+          <li>Remplissez le formulaire ci-dessous avec la photo, le nom et le prix du téléphone.</li>
+          <li>Cliquez sur <strong>« Ajouter le téléphone »</strong> — il apparaît immédiatement sur le site, visible par tous vos visiteurs.</li>
+          <li>Pour retirer un téléphone vendu ou plus disponible, cliquez sur <strong>« Supprimer »</strong> sous sa fiche, en bas de cette page.</li>
+        </ol>
+      </div>
+
+      <section class="admin-section">
+        <h2 class="admin-section-title">Ajouter un téléphone</h2>
+        <p class="admin-section-sub">Tous les champs marqués * sont obligatoires. La photo peut être prise directement avec votre téléphone.</p>
+
+        <form class="admin-form" id="productForm">
+          <div class="form-photo-col">
+            <label class="photo-drop" id="photoDrop">
+              <img id="photoPreview" style="display:none;">
+              <span id="photoDropLabel">📷<br>Cliquez pour ajouter<br>une photo</span>
+              <input type="file" id="photoInput" accept="image/*">
+            </label>
+          </div>
+
+          <div class="form-fields">
+            <div class="form-group full">
+              <label>Nom du téléphone *</label>
+              <input type="text" id="fieldName" placeholder="Ex : iPhone 15 Pro Max" required>
+            </div>
+            <div class="form-group">
+              <label>Prix (DA) *</label>
+              <input type="number" id="fieldPrice" placeholder="Ex : 165000" min="0" step="500" required>
+            </div>
+            <div class="form-group">
+              <label>Étiquette</label>
+              <select id="fieldBadge">
+                <option value="">Aucune</option>
+                <option value="new">Nouveau</option>
+                <option value="hot">Populaire</option>
+                <option value="promo">Promo</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Stockage / mémoire</label>
+              <input type="text" id="fieldStorage" placeholder="Ex : 256 Go">
+            </div>
+            <div class="form-group">
+              <label>Autre info (état, réseau...)</label>
+              <input type="text" id="fieldTag" placeholder="Ex : 5G, Reconditionné...">
+            </div>
+            <div class="form-group full">
+              <label>Description courte</label>
+              <textarea id="fieldDesc" rows="2" placeholder="Une ou deux phrases sur le téléphone"></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="submitBtn">Ajouter le téléphone</button>
+              <span class="form-status" id="formStatus"></span>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <section class="admin-section">
+        <div class="admin-list-head">
+          <div>
+            <h2 class="admin-section-title" style="margin-bottom:0;">Téléphones en ligne</h2>
+            <p class="admin-section-sub" style="margin-bottom:0;">Visibles actuellement par vos clients sur le site.</p>
+          </div>
+          <button class="btn btn-ghost btn-sm" id="seedBtn" style="display:none;">Importer le catalogue de démonstration</button>
+        </div>
+        <div class="admin-grid" id="adminGrid">
+          <p class="empty-state">Chargement…</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<script type="module" src="js/admin.js"></script>
+</body>
+</html>

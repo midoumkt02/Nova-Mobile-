@@ -1,0 +1,122 @@
+/* ===================== ADMIN LAYOUT ===================== */
+body.admin-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-header {
+  border-bottom: 1px solid var(--border);
+  padding: 18px 0;
+  background: rgba(7,8,13,0.75);
+  backdrop-filter: blur(16px);
+  position: sticky; top: 0; z-index: 50;
+}
+.admin-header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.admin-user { display: flex; align-items: center; gap: 14px; font-size: 0.88rem; color: var(--text-dim); }
+.admin-user strong { color: var(--text); }
+
+.admin-main { flex: 1; padding: 48px 0 90px; }
+.admin-section { margin-bottom: 56px; }
+.admin-section-title { font-family: var(--ff-display); font-size: 1.3rem; margin-bottom: 6px; }
+.admin-section-sub { color: var(--text-dim); font-size: 0.92rem; margin-bottom: 26px; max-width: 620px; }
+
+/* ---------- Login screen ---------- */
+.login-screen {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px;
+  position: relative; overflow: hidden;
+}
+.login-glow { position: absolute; width: 480px; height: 480px; border-radius: 50%; background: rgba(124,92,255,0.28); filter: blur(120px); top: -120px; right: -120px; pointer-events: none; }
+.login-card {
+  position: relative; z-index: 1;
+  width: 100%; max-width: 400px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 40px 34px; box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+}
+.login-logo { display: flex; align-items: center; gap: 10px; justify-content: center; margin-bottom: 6px; }
+.login-title { text-align: center; font-family: var(--ff-display); font-size: 1.4rem; margin: 18px 0 6px; }
+.login-sub { text-align: center; color: var(--text-dim); font-size: 0.9rem; margin-bottom: 30px; }
+.login-form { display: flex; flex-direction: column; gap: 16px; }
+.login-error {
+  display: none; background: rgba(255,92,92,0.12); border: 1px solid rgba(255,92,92,0.3); color: #ff8a8a;
+  font-size: 0.85rem; padding: 12px 14px; border-radius: 10px; margin-top: 4px;
+}
+.login-error.visible { display: block; }
+.login-hint { text-align: center; margin-top: 22px; font-size: 0.8rem; color: var(--text-dimmer); }
+
+/* ---------- Dashboard ---------- */
+.dashboard { display: none; }
+.dashboard.visible { display: block; }
+.login-screen.hidden { display: none; }
+
+.setup-banner {
+  background: rgba(255,177,86,0.1); border: 1px solid rgba(255,177,86,0.35); color: #ffcf94;
+  border-radius: var(--radius-sm); padding: 16px 20px; font-size: 0.88rem; margin-bottom: 40px; line-height: 1.6;
+}
+.setup-banner strong { color: #ffb156; }
+.setup-banner code { background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px; font-size: 0.82rem; }
+
+.help-box {
+  background: rgba(0,217,208,0.07); border: 1px solid rgba(0,217,208,0.25); border-radius: var(--radius-sm);
+  padding: 20px 22px; margin-bottom: 40px; font-size: 0.88rem; color: var(--text-dim); line-height: 1.7;
+}
+.help-box strong { color: var(--accent-2); }
+.help-box ol { margin: 10px 0 0 20px; }
+
+/* ---------- Add form ---------- */
+.admin-form {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 32px; display: grid; grid-template-columns: 220px 1fr; gap: 30px;
+}
+.form-photo-col { display: flex; flex-direction: column; gap: 12px; }
+.photo-drop {
+  width: 100%; aspect-ratio: 3/4; border-radius: 16px; border: 2px dashed var(--border-light);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  color: var(--text-dimmer); cursor: pointer; transition: all .25s ease; overflow: hidden; position: relative;
+  background: var(--bg);
+}
+.photo-drop:hover { border-color: var(--accent); color: var(--text-dim); }
+.photo-drop img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 14px; }
+.photo-drop span { font-size: 0.8rem; text-align: center; padding: 0 12px; }
+.photo-drop input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+
+.form-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-content: start; }
+.form-fields .full { grid-column: 1 / -1; }
+.form-fields .form-group select {
+  width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 13px 16px; color: var(--text); font-size: 0.92rem;
+}
+.form-fields .form-group select:focus { outline: none; border-color: var(--accent); }
+.form-actions { grid-column: 1 / -1; display: flex; align-items: center; gap: 16px; margin-top: 4px; }
+.form-status { font-size: 0.85rem; }
+.form-status.success { color: var(--accent-2); }
+.form-status.error { color: #ff8a8a; }
+
+/* ---------- Product list (admin) ---------- */
+.admin-list-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; flex-wrap: wrap; gap: 12px; }
+.admin-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+.admin-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 16px; display: flex; flex-direction: column; gap: 10px;
+}
+.admin-card-photo {
+  height: 140px; display: flex; align-items: center; justify-content: center; background: var(--bg); border-radius: 10px;
+}
+.admin-card-photo img { max-height: 100%; max-width: 90%; object-fit: contain; }
+.admin-card h4 { font-size: 0.95rem; font-weight: 600; }
+.admin-card .price { font-size: 1rem; }
+.admin-card-badge { font-size: 0.68rem; font-weight: 700; color: var(--accent-2); }
+.admin-card-actions { margin-top: auto; display: flex; }
+.btn-delete {
+  width: 100%; padding: 9px; border-radius: 8px; font-size: 0.8rem; font-weight: 600;
+  background: rgba(255,92,92,0.1); color: #ff8a8a; border: 1px solid rgba(255,92,92,0.3); transition: all .2s ease;
+}
+.btn-delete:hover { background: rgba(255,92,92,0.2); }
+.btn-delete:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.empty-state { text-align: center; padding: 50px 20px; color: var(--text-dimmer); }
+
+@media (max-width: 720px) {
+  .admin-form { grid-template-columns: 1fr; }
+  .form-photo-col { max-width: 220px; margin: 0 auto; }
+  .form-fields { grid-template-columns: 1fr; }
+}

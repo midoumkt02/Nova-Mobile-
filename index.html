@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOVA Mobile — Boutique Premium de Téléphonie</title>
+<meta name="description" content="NOVA Mobile — Vente, réparation et reprise de smartphones haut de gamme. Boutique premium, techniciens certifiés, garantie 2 ans.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+  <div class="preloader-logo">NOVA</div>
+</div>
+
+<!-- Progress bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Header -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#home" class="logo">
+      <span class="logo-mark">N</span>
+      <span class="logo-text">NOVA<span class="logo-accent">Mobile</span></span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#home" class="nav-link active">Accueil</a>
+      <a href="#produits" class="nav-link">Produits</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#avis" class="nav-link">Avis</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#contact" class="btn btn-primary btn-sm">Nous contacter</a>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#home" class="mobile-link">Accueil</a>
+  <a href="#produits" class="mobile-link">Produits</a>
+  <a href="#services" class="mobile-link">Services</a>
+  <a href="#avis" class="mobile-link">Avis</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+  <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem;">Nous contacter</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="hero-grid"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-text reveal">
+        <div class="pill">
+          <span class="pill-dot"></span>
+          Nouvelle collection été 2026 disponible
+        </div>
+        <h1>L'excellence <span class="text-gradient">mobile</span>,<br> réinventée pour vous.</h1>
+        <p class="hero-sub">
+          NOVA Mobile, c'est la référence en vente de smartphones neufs &amp; reconditionnés,
+          réparation express et reprise de votre ancien appareil. Une expérience boutique
+          haut de gamme, pensée pour votre exigence.
+        </p>
+        <div class="hero-cta">
+          <a href="#produits" class="btn btn-primary">Découvrir nos produits</a>
+          <a href="#contact" class="btn btn-ghost">
+            Prendre rendez-vous
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-badges">
+          <div class="hero-badge">
+            <strong>2 ans</strong>
+            <span>Garantie boutique</span>
+          </div>
+          <div class="hero-badge">
+            <strong>24h</strong>
+            <span>Réparation express</span>
+          </div>
+          <div class="hero-badge">
+            <strong>4.9/5</strong>
+            <span>Note clients</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" id="heroVisual">
+        <div class="phone-mock phone-mock-back">
+          <div class="phone-notch"></div>
+          <div class="phone-screen screen-b">
+            <div class="ui-status"><span>9:41</span><span>••• 📶 🔋</span></div>
+            <div class="ui-card"></div>
+            <div class="ui-card sm"></div>
+          </div>
+        </div>
+        <div class="phone-mock phone-mock-front">
+          <div class="phone-notch"></div>
+          <div class="phone-screen screen-a">
+            <div class="ui-status"><span>9:41</span><span>••• 📶 🔋</span></div>
+            <div class="ui-brand">NOVA</div>
+            <div class="ui-ring"></div>
+            <div class="ui-row">
+              <div class="ui-chip"></div>
+              <div class="ui-chip"></div>
+              <div class="ui-chip"></div>
+            </div>
+          </div>
+        </div>
+        <div class="float-card float-card-1">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Paiement sécurisé
+        </div>
+        <div class="float-card float-card-2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Livraison rapide
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS MARQUEE -->
+  <section class="marquee-section reveal">
+    <div class="marquee-label">Nos marques partenaires</div>
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>Apple</span><span>Samsung</span><span>Xiaomi</span><span>Google Pixel</span><span>OnePlus</span><span>Huawei</span><span>Oppo</span>
+        <span>Apple</span><span>Samsung</span><span>Xiaomi</span><span>Google Pixel</span><span>OnePlus</span><span>Huawei</span><span>Oppo</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat reveal">
+        <div class="stat-num" data-count="500">0</div>
+        <div class="stat-label">Clients satisfaits</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num" data-count="1200">0</div>
+        <div class="stat-label">Réparations réussies</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num" data-count="50">0</div>
+        <div class="stat-label">Modèles en stock</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num" data-count="8">0</div>
+        <div class="stat-label">Années d'expérience</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUITS -->
+  <section class="section" id="produits">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Notre sélection</div>
+        <h2>Les smartphones les plus <span class="text-gradient">demandés</span></h2>
+        <p>Neufs, reconditionnés ou premium — chaque appareil est testé et garanti par notre atelier.</p>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <p class="product-empty">Chargement du catalogue…</p>
+      </div>
+
+      <div class="section-cta reveal">
+        <a href="#contact" class="btn btn-primary">Voir tout le catalogue</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Ce que nous faisons</div>
+        <h2>Des services pensés pour <span class="text-gradient">durer</span></h2>
+        <p>Au-delà de la vente, NOVA Mobile vous accompagne sur tout le cycle de vie de votre appareil.</p>
+      </div>
+
+      <div class="service-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6 3h12a1 1 0 011 1v16a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8"/><path d="M10 18h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Vente neuf &amp; reconditionné</h3>
+          <p>Large choix de smartphones neufs et reconditionnés grade A, testés sur 40 points de contrôle.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a4 4 0 015.66 5.66L12 20.3l-3-3 8.36-8.36a4 4 0 01-2.66-2.64zM4 20l3.5-1L4 15.5 3 20l1 0z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Réparation express</h3>
+          <p>Écran, batterie, connecteur de charge : la majorité des pannes réparées en moins de 24h.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 01-4 4H3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Reprise &amp; rachat</h3>
+          <p>Estimation immédiate de votre ancien téléphone, reprise à sa juste valeur, sans rendez-vous.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Accessoires premium</h3>
+          <p>Coques, chargeurs, écouteurs et protections sélectionnés pour leur qualité et leur design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section why">
+    <div class="container why-inner">
+      <div class="why-visual reveal">
+        <div class="why-card why-card-main">
+          <div class="why-card-top">
+            <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+          </div>
+          <div class="why-line w-80"></div>
+          <div class="why-line w-60"></div>
+          <div class="why-chart">
+            <div class="bar" style="--h:40%"></div>
+            <div class="bar" style="--h:65%"></div>
+            <div class="bar" style="--h:50%"></div>
+            <div class="bar" style="--h:85%"></div>
+            <div class="bar" style="--h:70%"></div>
+          </div>
+        </div>
+        <div class="why-card why-card-float">
+          <strong>+98%</strong>
+          <span>Clients qui recommandent NOVA</span>
+        </div>
+      </div>
+
+      <div class="why-text reveal">
+        <div class="eyebrow">Pourquoi NOVA Mobile</div>
+        <h2>Une boutique en qui vous pouvez avoir <span class="text-gradient">confiance</span></h2>
+        <ul class="why-list">
+          <li>
+            <div class="why-list-icon">✓</div>
+            <div><strong>Techniciens certifiés</strong><span>Toute notre équipe est formée et certifiée constructeur.</span></div>
+          </li>
+          <li>
+            <div class="why-list-icon">✓</div>
+            <div><strong>Garantie 2 ans</strong><span>Chaque appareil vendu est couvert par notre garantie boutique.</span></div>
+          </li>
+          <li>
+            <div class="why-list-icon">✓</div>
+            <div><strong>Paiement en plusieurs fois</strong><span>Facilités de paiement disponibles sans frais cachés.</span></div>
+          </li>
+          <li>
+            <div class="why-list-icon">✓</div>
+            <div><strong>Pièces d'origine</strong><span>Nous n'utilisons que des pièces certifiées pour nos réparations.</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section section-alt" id="avis">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Témoignages</div>
+        <h2>Ce que nos clients <span class="text-gradient">disent</span></h2>
+      </div>
+
+      <div class="testimonial-wrap reveal">
+        <div class="testimonial-track" id="testiTrack">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Écran remplacé en 2h chez NOVA, un accueil impeccable et un prix honnête. Je recommande à 100%."</p>
+            <div class="testi-author">
+              <div class="avatar">SL</div>
+              <div><strong>Sofia L.</strong><span>Cliente réparation</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"J'ai acheté un reconditionné, il est comme neuf. Le service après-vente est vraiment au top."</p>
+            <div class="testi-author">
+              <div class="avatar">KM</div>
+              <div><strong>Karim M.</strong><span>Client boutique</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Reprise de mon ancien téléphone en 10 minutes, estimation juste. Une équipe très professionnelle."</p>
+            <div class="testi-author">
+              <div class="avatar">EA</div>
+              <div><strong>Emma A.</strong><span>Reprise &amp; rachat</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-dots" id="testiDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner reveal">
+    <div class="container cta-banner-inner">
+      <h2>Envie d'une boutique en ligne aussi soignée que ce site ?</h2>
+      <p>Cette page est une démonstration de nos services de création de sites web professionnels pour commerces et boutiques.</p>
+      <a href="#contact" class="btn btn-light">Discutons de votre projet</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container contact-inner">
+      <div class="contact-info reveal">
+        <div class="eyebrow">Contact</div>
+        <h2>Une question, un rendez-vous ?<br><span class="text-gradient">Parlons-en.</span></h2>
+        <p class="hero-sub">Notre équipe vous répond sous 24h ouvrées. Passez aussi directement en boutique.</p>
+
+        <div class="info-list">
+          <div class="info-item">
+            <div class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/></svg></div>
+            <div><strong>Adresse</strong><span>12 Avenue des Lumières, 75000 Paris</span></div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.95.36 1.87.68 2.75a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.33-1.33a2 2 0 012.11-.45c.88.32 1.8.55 2.75.68A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.8"/></svg></div>
+            <div><strong>Téléphone</strong><span>01 23 45 67 89</span></div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.8"/></svg></div>
+            <div><strong>Email</strong><span>contact@nova-mobile.fr</span></div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+            <div><strong>Horaires</strong><span>Lun–Sam · 9h30 – 19h30</span></div>
+          </div>
+        </div>
+
+        <div class="social-row">
+          <a href="#" aria-label="Instagram" class="social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook" class="social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></a>
+          <a href="#" aria-label="Whatsapp" class="social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 21l1.65-4.95A9 9 0 1112 21a8.94 8.94 0 01-4.5-1.2L3 21z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nom complet</label>
+            <input type="text" name="name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label>Téléphone</label>
+            <input type="tel" name="phone" placeholder="06 12 34 56 78">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="vous@exemple.fr" required>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" rows="4" placeholder="Décrivez votre besoin (achat, réparation, reprise...)" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          Envoyer le message
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="form-note" id="formNote"></div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="#home" class="logo">
+        <span class="logo-mark">N</span>
+        <span class="logo-text">NOVA<span class="logo-accent">Mobile</span></span>
+      </a>
+      <p>Votre boutique de téléphonie premium : vente, réparation et reprise, au même endroit.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="#home">Accueil</a>
+      <a href="#produits">Produits</a>
+      <a href="#services">Services</a>
+      <a href="#avis">Avis</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">Vente neuf &amp; reconditionné</a>
+      <a href="#services">Réparation express</a>
+      <a href="#services">Reprise &amp; rachat</a>
+      <a href="#services">Accessoires</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <p>Recevez nos offres exclusives et nouveautés.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Votre email" required>
+        <button type="submit" aria-label="S'inscrire">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© 2026 NOVA Mobile. Tous droits réservés. <a href="admin.html" class="admin-link">Espace gérant</a></span>
+    <span class="footer-credit">Site vitrine conçu &amp; développé par <strong>[Votre Nom / Agence]</strong> — Création de sites web professionnels</span>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script type="module" src="js/catalog.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
